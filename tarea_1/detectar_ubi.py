@@ -1,5 +1,7 @@
 from ultralytics import YOLO
 import cv2
+from icecream import ic
+
 # import re
 
 # Cargar los modelos
@@ -31,7 +33,7 @@ for result in plate_results:
         char_results = char_model(plate_roi)
 
         # Mostrar el texto de la placa en consola
-        # print(f"coordenadas: {char_results[0].boxes}")
+        ic(char_results)
 
         # Inicializar la placa como un texto vacío
         plate_text = ""
